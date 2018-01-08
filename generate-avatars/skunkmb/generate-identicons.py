@@ -142,6 +142,6 @@ for i in range(SHAPES_AMOUNT):
     draw_shape(image_draw, hashes_combo, i)
 
 image = image.filter(ImageFilter.MedianFilter(9))
-image = ImageOps.solarize(image, 100)
+# image = ImageOps.solarize(image, 100)
 
 image.save('output.png', "PNG")

@@ -48,6 +48,11 @@ if not (title in expected_titles):
 # Check that the PR has the right branch name.
 branch = data['head']['ref']
 expected_branch = "submit-a-pull-request"
+print("branch={}".format(branch))
+print(len(expected_branch))
+print(len(branch))
+print([ord(c) for c in branch])
+print([ord(c) for c in expected_branch])
 if branch != expected_branch:
 	fail("PR has a wrong branch name. Submitted: '{}'. Expected: '{}'.".format(branch, expected_branch))
 
